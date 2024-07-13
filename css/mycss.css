@@ -1,37 +1,27 @@
-/*所有页面实现毛玻璃特效*/
+/* 所有页面实现毛玻璃特效 */
 #aside-content {
     background: rgba(255, 255, 255, 0);
 }
 
-#aside-content>.card-widget:first-child {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-#aside-content .card-widget {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-.layout>div:first-child:not(.recent-posts) {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-}
-
+#aside-content>.card-widget:first-child,
+#aside-content .card-widget,
+.layout>div:first-child:not(.recent-posts),
 #recent-posts>.recent-post-item {
     background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
-/*标题栏*/
 #page-header.nav-visible #nav {
     background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
 }
 
-/*搜索框美化*/
+/* 搜索框美化 */
 .search-dialog {
     background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0px;
 }
@@ -40,9 +30,10 @@
     background: rgba(255, 255, 255, 0);
 }
 
-/*手机端毛玻璃优化*/
+/* 手机端毛玻璃优化 */
 #sidebar #sidebar-menus.open {
     background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -50,8 +41,7 @@
     background: rgba(255, 255, 255, 0);
 }
 
-/* 页脚footer */
-/* 渐变色滚动动画 */
+/* 页脚 footer */
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0 50%;
@@ -143,7 +133,8 @@
     background-color: transparent;
 }
 
-::-moz-selection {
+/* 选中文本 */
+::selection {
     color: #fff;
     background-color: #49b1f5;
 }
@@ -168,8 +159,6 @@
     animation: gradientBG 15s ease infinite;
 }
 
-
-
 #web_bg {
     background: -webkit-linear-gradient(0deg,
             rgba(247, 149, 51, 0.1) 0,
@@ -198,7 +187,7 @@
             rgba(16, 152, 173, 0.1) 72%,
             rgba(7, 179, 155, 0.1) 86%,
             rgba(109, 186, 130, 0.1) 100%);
-    background: -ms-linear-gradient(0deg,
+    background: linear-gradient(0deg,
             rgba(247, 149, 51, 0.1) 0,
             rgba(243, 112, 85, 0.1) 15%,
             rgba(239, 78, 123, 0.1) 30%,
@@ -207,80 +196,4 @@
             rgba(16, 152, 173, 0.1) 72%,
             rgba(7, 179, 155, 0.1) 86%,
             rgba(109, 186, 130, 0.1) 100%);
-    background: linear-gradient(90deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-}
-
-
-#web_bg {
-    background: -webkit-linear-gradient(0deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-    background: -moz-linear-gradient(0deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-    background: -o-linear-gradient(0deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-    background: -ms-linear-gradient(0deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-    background: linear-gradient(90deg,
-            rgba(247, 149, 51, 0.1) 0,
-            rgba(243, 112, 85, 0.1) 15%,
-            rgba(239, 78, 123, 0.1) 30%,
-            rgba(161, 102, 171, 0.1) 44%,
-            rgba(80, 115, 184, 0.1) 58%,
-            rgba(16, 152, 173, 0.1) 72%,
-            rgba(7, 179, 155, 0.1) 86%,
-            rgba(109, 186, 130, 0.1) 100%);
-}
-
-
-/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.5 可以自行修改*/
-    background: rgba(255, 255, 255, .0);
-}
-
-/* 所有页面背景 */
-#aside_content .card-widget,
-#recent-posts>.recent-post-item,
-.layout_page>div:first-child:not(.recent-posts),
-.layout_post>#page,
-.layout_post>#post,
-.read-mode .layout_post>#post {
-    /* 以下代表透明度为0.5 */
-    background: rgba(255, 255, 255, .0);
 }
