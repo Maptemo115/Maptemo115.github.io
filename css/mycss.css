@@ -1,5 +1,6 @@
 /* 所有页面实现毛玻璃特效 */
 #aside-content {
+    /* 设置侧边栏内容的背景为透明 */
     background: rgba(255, 255, 255, 0);
 }
 
@@ -7,37 +8,52 @@
 #aside-content .card-widget,
 .layout>div:first-child:not(.recent-posts),
 #recent-posts>.recent-post-item {
+    /* 设置卡片小部件和最近文章条目的背景为半透明白色，创建毛玻璃效果 */
     background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
     -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
     backdrop-filter: blur(10px);
 }
 
 #page-header.nav-visible #nav {
+    /* 设置导航栏在可见状态下的背景为半透明白色，创建毛玻璃效果 */
     background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的更强的毛玻璃效果 */
     -webkit-backdrop-filter: blur(50px);
+    /* 为其他浏览器设置的更强的毛玻璃效果 */
     backdrop-filter: blur(50px);
 }
 
 /* 搜索框美化 */
 .search-dialog {
+    /* 设置搜索对话框的背景为半透明白色，创建毛玻璃效果 */
     background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
     -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
     backdrop-filter: blur(10px);
+    /* 设置搜索对话框的圆角 */
     border-radius: 0px;
 }
 
 #search-mask {
+    /* 设置搜索遮罩的背景为透明 */
     background: rgba(255, 255, 255, 0);
 }
 
 /* 手机端毛玻璃优化 */
 #sidebar #sidebar-menus.open {
+    /* 设置手机端侧边栏菜单打开时的背景为半透明白色，创建毛玻璃效果 */
     background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
     -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
     backdrop-filter: blur(10px);
 }
 
 #sidebar #menu-mask {
+    /* 设置手机端侧边栏菜单遮罩的背景为透明 */
     background: rgba(255, 255, 255, 0);
 }
 
@@ -85,11 +101,17 @@
 }
 
 #footer {
+    /* 设置页脚的渐变背景色 */
     background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    /* 设置背景大小以实现动画效果 */
     background-size: 400% 400%;
+    /* 为支持WebKit内核浏览器设置的背景动画 */
     -webkit-animation: Gradient 10s ease infinite;
+    /* 为支持Mozilla浏览器设置的背景动画 */
     -moz-animation: Gradient 10s ease infinite;
+    /* 为其他浏览器设置的背景动画 */
     animation: Gradient 10s ease infinite;
+    /* 禁止用户选择页脚内容 */
     -o-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -98,25 +120,31 @@
 }
 
 #footer:before {
+    /* 设置页脚之前的背景颜色为透明 */
     background-color: rgba(0, 0, 0, 0);
 }
 
 #footer-wrap {
+    /* 设置页脚包裹层的背景颜色为透明 */
     background-color: rgba(0, 0, 0, 0);
 }
 
 /* 滚动条 */
 ::-webkit-scrollbar {
+    /* 设置滚动条宽度 */
     width: 8px;
+    /* 设置滚动条高度 */
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
+    /* 设置滚动条轨道的背景颜色和圆角 */
     background-color: rgba(73, 177, 245, 0.2);
     border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb {
+    /* 设置滚动条拇指的背景颜色和渐变图案 */
     background-color: #49b1f5;
     background-image: -webkit-linear-gradient(45deg,
             rgba(255, 255, 255, 0.4) 25%,
@@ -130,15 +158,18 @@
 }
 
 ::-webkit-scrollbar-corner {
+    /* 设置滚动条角落的背景颜色为透明 */
     background-color: transparent;
 }
 
 /* 选中文本 */
 ::selection {
+    /* 设置选中文本的颜色和背景颜色 */
     color: #fff;
     background-color: #49b1f5;
 }
 
+/* 页面背景色渐变动画 */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -154,12 +185,257 @@
 }
 
 #web_bg {
+    /* 设置网页背景的渐变颜色 */
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /* 设置背景大小以实现动画效果 */
     background-size: 400% 400%;
+    /* 设置背景动画 */
     animation: gradientBG 15s ease infinite;
 }
 
 #web_bg {
+    /* 设置多个前缀以支持不同浏览器的渐变背景 */
+    background: -webkit-linear-gradient(0deg,
+            rgba(247, 149, 51, 0.1) 0,
+            rgba(243, 112, 85, 0.1) 15%,
+            rgba(239, 78, 123, 0.1) 30%,
+            rgba(161, 102, 171, 0.1) 44%,
+            rgba(80, 115, 184, 0.1) 58%,
+            rgba(16, 152, 173, 0.1) 72%,
+            rgba(7, 179, 155, 0.1) 86%,
+            rgba(109, 186, 130, 0.1) 100%);
+    background: -moz-linear-gradient(0deg,
+            rgba(247, 149, 51, 0.1) 0,
+            rgba(243, 112, 85, 0.1) 15%,
+            rgba(239, 78, 123, 0.1) 30%,
+            rgba(161, 102, 171, 0.1) 44%,
+            rgba(80, 115, 184, 0.1) 58%,
+            rgba(16, 152, 173, 0.1) 72%,
+            rgba(7, 179, 155, 0.1) 86%,
+            rgba(109, 186, 130, 0.1) 100%);
+    background: -o-linear-gradient(0deg,
+            rgba(247, 149, 51, 0.1) 0,
+            rgba(243, 112, 85, 0.1) 15%,
+            rgba(239, 78, 123, 0.1) 30%,
+            rgba(161, 102, 171, 0.1) 44%,
+            rgba(80, 115, 184, 0.1) 58%,
+            rgba(16, 152, 173, 0.1) 72%,
+            rgba(7, 179, 155, 0.1) 86%,
+            rgba(109, 186, 130, 0.1) 100%);
+    background: linear-gradient(0deg,
+            rgba(247, 149, 51, 0.1) 0,
+            rgba(243, 112, 85, 0.1) 15%,
+            rgba(239, 78, 123, 0.1) 30%,
+            rgba(161, 102, 171, 0.1) 44%,
+            rgba(80, 115, 184, 0.1) 58%,
+            rgba(16, 152, 173, 0.1) 72%,
+            rgba(7, 179, 155, 0.1) 86%,
+            rgba(109, 186, 130, 0.1) 100%);
+}
+
+/* 所有页面实现毛玻璃特效 */
+#aside-content {
+    /* 设置侧边栏内容的背景为透明 */
+    background: rgba(255, 255, 255, 0);
+}
+
+#aside-content>.card-widget:first-child,
+#aside-content .card-widget,
+.layout>div:first-child:not(.recent-posts),
+#recent-posts>.recent-post-item {
+    /* 设置卡片小部件和最近文章条目的背景为半透明白色，创建毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
+    backdrop-filter: blur(10px);
+}
+
+#page-header.nav-visible #nav {
+    /* 设置导航栏在可见状态下的背景为半透明白色，创建毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的更强的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(50px);
+    /* 为其他浏览器设置的更强的毛玻璃效果 */
+    backdrop-filter: blur(50px);
+}
+
+/* 搜索框美化 */
+.search-dialog {
+    /* 设置搜索对话框的背景为半透明白色，创建毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
+    backdrop-filter: blur(10px);
+    /* 设置搜索对话框的圆角 */
+    border-radius: 0px;
+}
+
+#search-mask {
+    /* 设置搜索遮罩的背景为透明 */
+    background: rgba(255, 255, 255, 0);
+}
+
+/* 手机端毛玻璃优化 */
+#sidebar #sidebar-menus.open {
+    /* 设置手机端侧边栏菜单打开时的背景为半透明白色，创建毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.5);
+    /* 为支持WebKit内核浏览器设置的毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px);
+    /* 为其他浏览器设置的毛玻璃效果 */
+    backdrop-filter: blur(10px);
+}
+
+#sidebar #menu-mask {
+    /* 设置手机端侧边栏菜单遮罩的背景为透明 */
+    background: rgba(255, 255, 255, 0);
+}
+
+/* 页脚 footer */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#footer {
+    /* 设置页脚的渐变背景色 */
+    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    /* 设置背景大小以实现动画效果 */
+    background-size: 400% 400%;
+    /* 为支持WebKit内核浏览器设置的背景动画 */
+    -webkit-animation: Gradient 10s ease infinite;
+    /* 为支持Mozilla浏览器设置的背景动画 */
+    -moz-animation: Gradient 10s ease infinite;
+    /* 为其他浏览器设置的背景动画 */
+    animation: Gradient 10s ease infinite;
+    /* 禁止用户选择页脚内容 */
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#footer:before {
+    /* 设置页脚之前的背景颜色为透明 */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#footer-wrap {
+    /* 设置页脚包裹层的背景颜色为透明 */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    /* 设置滚动条宽度 */
+    width: 8px;
+    /* 设置滚动条高度 */
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /* 设置滚动条轨道的背景颜色和圆角 */
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    /* 设置滚动条拇指的背景颜色和渐变图案 */
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.4) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.4) 75%,
+            transparent 75%,
+            transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    /* 设置滚动条角落的背景颜色为透明 */
+    background-color: transparent;
+}
+
+/* 选中文本 */
+::selection {
+    /* 设置选中文本的颜色和背景颜色 */
+    color: #fff;
+    background-color: #49b1f5;
+}
+
+/* 页面背景色渐变动画 */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#web_bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#web_bg {
+    /* 设置网页背景的渐变颜色 */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /* 设置背景大小以实现动画效果 */
+    background-size: 400% 400%;
+    /* 设置背景动画 */
+    animation: gradientBG 15s ease infinite;
+}
+
+#web_bg {
+    /* 设置多个前缀以支持不同浏览器的渐变背景 */
     background: -webkit-linear-gradient(0deg,
             rgba(247, 149, 51, 0.1) 0,
             rgba(243, 112, 85, 0.1) 15%,
